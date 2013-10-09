@@ -1,0 +1,26 @@
+name:                benchmark
+version:             0.1.0.0
+license:             MIT
+license-file:        LICENSE
+author:              Michael Baker
+maintainer:          michaeltbaker@gmail.com
+category:            Testing
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable benchmark-foreman
+  main-is:             Foreman.hs
+  hs-source-dirs:      src
+  build-depends:       base                 == 4.6.*,
+                       network              == 2.4.1.2,
+                       unordered-containers == 0.2.3.3,
+                       stm                  == 2.4.2,
+                       safe                 == 0.3.3,
+                       uuid                 == 1.2.14
+
+executable benchmark-worker
+  main-is:             Worker.hs
+  hs-source-dirs:      src
+  build-depends:       base                 == 4.6.*,
+                       network              == 2.4.1.2,
+                       safe                 == 0.3.3
